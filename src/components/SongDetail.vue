@@ -167,14 +167,14 @@ const navigateLyrics = (direction) => {
   height: 0;
   margin-top: 8px;
   margin-bottom: 16px;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 #lrc {
@@ -195,10 +195,10 @@ const navigateLyrics = (direction) => {
     }
 
     .active {
-      color: map-get($admonition-color-map, 'note');
+      color: var(--code-color);
 
       rt {
-        color: map-get($admonition-color-map, 'note');
+        color: var(--code-color);
       }
     }
   }

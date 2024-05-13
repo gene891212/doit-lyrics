@@ -1,5 +1,5 @@
 <template>
-  <div id="mask" :class="{ blur: isMobileMenuOpen }" @click="toggleMobileMenu"></div>
+  <div id="mask" @click="toggleMobileMenu"></div>
   <!-- Desktop header -->
   <header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -89,10 +89,12 @@ const themeManager = new ThemeManager()
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
+  document.body.classList.toggle('blur')
 }
 
 // Close the mobile menu when the route changes
 watch(route, () => {
   isMobileMenuOpen.value = false
+  document.body.classList.remove('blur')
 })
 </script>

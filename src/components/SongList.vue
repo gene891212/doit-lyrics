@@ -2,9 +2,7 @@
   <div class="page home" posts>
     <div class="home-profile">
       <h1 class="home-title">所有歌曲</h1>
-      <h2 class="home-subtitle">
-        <div id="id-1" class="typeit">沉浸在Aimer音樂的世界</div>
-      </h2>
+      <h2 class="home-subtitle">沉浸在Aimer音樂的世界</h2>
     </div>
     <article class="single summary" v-for="song in songs" :key="song.id">
       <router-link :to="{ name: 'SongDetail', params: { youtubeId: song.youtubeId } }">
