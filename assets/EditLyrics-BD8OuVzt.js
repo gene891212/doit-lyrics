@@ -1,9 +1,9 @@
-import{r as p,c as w,o as l,a as n,w as v,v as g,b as y,F as x,d as D,t as L,e as T,p as E,f as R,g as z,h as A,i as U,j as V}from"./index-Cg0BOLzm.js";const F=(o,s)=>{const b=o.__vccOpts||o;for(const[h,i]of s)b[h]=i;return b},_=o=>(E("data-v-956e05a5"),o=o(),R(),o),B={class:"page home",posts:""},N=_(()=>y("h2",null,"歌曲資訊",-1)),O=_(()=>y("h2",{for:""},"LRC or SRT",-1)),j=_(()=>y("h2",{for:""},"翻譯",-1)),q=["innerHTML"],H=_(()=>y("br",null,null,-1)),W={__name:"EditLyrics",setup(o){const s=p(`[ti:グレースノート]
+import{r as h,c as I,o as n,a as i,w as c,v as d,b as u,F as A,d as D,u as C,t as L,p as E,e as F,f as R,g as U,h as k,i as x}from"./index-rB-Fawh6.js";const B=(s,l)=>{const e=s.__vccOpts||s;for(const[f,v]of l)e[f]=v;return e},p=s=>(E("data-v-5041f1d5"),s=s(),F(),s),O={class:"page home",posts:""},q=p(()=>u("h2",null,"歌曲資訊",-1)),H=p(()=>u("h2",{for:""},"LRC or SRT",-1)),N=p(()=>u("h2",{for:""},"去除時間",-1)),W=p(()=>u("h2",{for:""},"翻譯",-1)),j={class:"input-container"},P=["value","onInput"],Q={class:"lyrics"},$=["innerHTML"],G=p(()=>u("br",null,null,-1)),J={__name:"EditLyrics",setup(s){const l=h(`[ti:グレースノート]
 [al:グレースノート]
 [ar:Aimer]
 [length: 04:59.87]
-`),b=p("quTQs77qN38"),h={ti:"title",al:"album",ar:"artist",length:"length"},i=w(()=>{const e=s.value.split(`
-`),r={};return e.forEach(t=>{const u=t.match("\\[(\\w+):(.*)\\]");if(u){const c=h[u[1]];r[c]=u[2]}}),r.youtubeId=b.value,r}),m=p(`[00:17.90] <ruby>開<rt>ひら</rt></ruby>いた<ruby>ノート<rt>のーと</rt></ruby>に<ruby>綴<rt>つづ</rt></ruby>った<ruby>青<rt>あお</rt></ruby>さは
+`),e=h("quTQs77qN38"),f={ti:"title",al:"album",ar:"artist",length:"length"},v=I(()=>{const b=l.value.split(`
+`),r={};return b.forEach(t=>{const y=t.match("\\[(\\w+):(.*)\\]");if(y){const a=f[y[1]];r[a]=y[2]}}),r.youtubeId=e.value,r}),m=h(`[00:17.90] <ruby>開<rt>ひら</rt></ruby>いた<ruby>ノート<rt>のーと</rt></ruby>に<ruby>綴<rt>つづ</rt></ruby>った<ruby>青<rt>あお</rt></ruby>さは
 [00:30.76] <ruby>終<rt>お</rt></ruby>わりの<ruby>チャイム<rt>ちゃいむ</rt></ruby>に<ruby>君<rt>きみ</rt></ruby>の<ruby>背中<rt>せなか</rt></ruby>を<ruby>探<rt>さが</rt></ruby>してた
 [00:43.57] <ruby>不器用<rt>ぶきよう</rt></ruby>で<ruby>曖昧<rt>あいまい</rt></ruby>な　<ruby>譜面<rt>ふめん</rt></ruby>にできない<ruby>音色<rt>ねいろ</rt></ruby>
 [00:56.43] <ruby>胸<rt>むね</rt></ruby>に<ruby>閉<rt>と</rt></ruby>じ<ruby>込<rt>こ</rt></ruby>めた
@@ -26,8 +26,8 @@ import{r as p,c as w,o as l,a as n,w as v,v as g,b as y,F as x,d as D,t as L,e a
 [03:59.33] ただ<ruby>夢<rt>ゆめ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>絆<rt>ほだ</rt></ruby>されたまま
 [04:06.28] <ruby>生<rt>う</rt></ruby>まれたときは　ひとりぼっちだったこと　<ruby>忘<rt>わす</rt></ruby>れがちになるんだね
 [04:28.84] <ruby>同<rt>おな</rt></ruby>じなんだよね
-[04:41.62] <ruby>同<rt>おな</rt></ruby>じなんだよね`);let a=[];const I=w(()=>{const e=m.value.split(`
-`);a=[];const r=e.map(t=>{const u=t.match(/\[(\d{2}:\d{2}\.\d{2})\]/);if(!u)return null;const c=u[1].split(":");let S=0;for(let d=0;d<c.length;d++)S+=parseFloat(c[d])*Math.pow(60,1-d);return a.push(S),t.replace(`${u[0]} `,"")});return console.log(a),r}),f=p(`翻閱開的筆記本，所譜寫的青澀
+[04:41.62] <ruby>同<rt>おな</rt></ruby>じなんだよね`);let o=[];const g=I(()=>{const b=m.value.split(`
+`);return o=[],b.map(t=>{const y=t.match(/\[(\d{2}:\d{2}\.\d{2})\]/);if(!y)return null;const a=y[1].split(":");let S=0;for(let _=0;_<a.length;_++)S+=parseFloat(a[_])*Math.pow(60,1-_);return o.push(S),t.replace(`${y[0]} `,"")})}),w=h(`翻閱開的筆記本，所譜寫的青澀
 伴隨一日完結的鐘聲，在字裡行間探尋你的身影
 看來如此笨拙、又如此曖昧的，無法書寫於譜面的音色
 將其深深埋藏於此心
@@ -50,5 +50,5 @@ import{r as p,c as w,o as l,a as n,w as v,v as g,b as y,F as x,d as D,t as L,e a
 這曾幾度禁錮自身的甜美幻夢
 令我得以淡忘，自己降生於世之時，曾孑然一身的孤獨
 我們都是這樣的吧
-就這麼忘卻降生的孤獨吧`),M=w(()=>f.value.split(`
-`)),k=async()=>{const e=await z(i.value);console.log(e)},C=async()=>{const e=await A({lines:I.value,language:"jp_yomi",songRef:U(V,"songs","gpp8WoMAMuDMlfObD0rC"),startTimes:a,youtubeId:b.value});console.log(e);const r=await A({lines:M.value,language:"zh_tw",songRef:U(V,"songs","gpp8WoMAMuDMlfObD0rC"),startTimes:a,youtubeId:b.value});console.log(r)};return(e,r)=>(l(),n("div",B,[N,v(y("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[0]||(r[0]=t=>s.value=t)},null,512),[[g,s.value]]),(l(!0),n(x,null,D(i.value,(t,u)=>(l(),n("div",null,L(u)+": "+L(t),1))),256)),v(y("input",{"onUpdate:modelValue":r[1]||(r[1]=t=>b.value=t)},null,512),[[g,b.value]]),y("button",{onClick:k},"Upload Song"),O,v(y("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[2]||(r[2]=t=>m.value=t)},null,512),[[g,m.value]]),j,v(y("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[3]||(r[3]=t=>f.value=t)},null,512),[[g,f.value]]),(l(!0),n(x,null,D(I.value,(t,u)=>(l(),n("div",null,[y("span",{innerHTML:t},null,8,q),T(),H,T(L(M.value[u]),1)]))),256)),y("button",{onClick:C},"Upload Lyrics")]))}},Q=F(W,[["__scopeId","data-v-956e05a5"]]);export{Q as default};
+就這麼忘卻降生的孤獨吧`),M=I(()=>w.value.split(`
+`)),T=async()=>{const b=await R(v.value);console.log(b)},V=async()=>{const b=await U({lines:g.value,language:"jp_yomi",songRef:k(x,"songs","gpp8WoMAMuDMlfObD0rC"),startTimes:o,youtubeId:e.value});console.log(b);const r=await U({lines:M.value,language:"zh_tw",songRef:k(x,"songs","gpp8WoMAMuDMlfObD0rC"),startTimes:o,youtubeId:e.value});console.log(r)},z=(b,r)=>{o[b]=parseFloat(r),console.log(o)};return(b,r)=>(n(),i("div",O,[q,c(u("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[0]||(r[0]=t=>l.value=t)},null,512),[[d,l.value]]),(n(!0),i(A,null,D(v.value,(t,y)=>(n(),i("div",{key:y},L(y)+": "+L(t),1))),128)),c(u("input",{"onUpdate:modelValue":r[1]||(r[1]=t=>e.value=t)},null,512),[[d,e.value]]),u("button",{onClick:T},"Upload Song"),H,c(u("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[2]||(r[2]=t=>m.value=t)},null,512),[[d,m.value]]),N,c(u("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[3]||(r[3]=t=>g.value=t)},null,512),[[d,g.value]]),W,c(u("textarea",{rows:"10",style:{width:"100%",resize:"vertical"},"onUpdate:modelValue":r[4]||(r[4]=t=>w.value=t)},null,512),[[d,w.value]]),(n(!0),i(A,null,D(C(o),(t,y)=>(n(),i("div",{class:"line",key:y},[u("div",j,[u("input",{value:t,onInput:a=>z(y,a.target.value)},null,40,P)]),u("div",Q,[u("span",{innerHTML:g.value[y]},null,8,$),G,u("span",null,L(M.value[y]),1)])]))),128)),u("button",{onClick:V},"Upload Lyrics")]))}},X=B(J,[["__scopeId","data-v-5041f1d5"]]);export{X as default};
