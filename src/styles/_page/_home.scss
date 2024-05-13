@@ -58,13 +58,6 @@
       margin: 0;
       padding: 0.5rem;
       color: $global-font-secondary-color;
-
-      [theme='dark'] & {
-        color: $global-font-secondary-color-dark;
-      }
-      [theme='black'] & {
-        color: $global-font-secondary-color-black;
-      }
     }
   }
 }
@@ -85,19 +78,9 @@
     color: $global-font-color;
     border-bottom: 3px dashed $global-border-color;
 
-    [theme='dark'] & {
-      color: $global-font-color-dark;
-      border-bottom: 3px dashed $global-border-color-dark;
-    }
-    [theme='black'] & {
-      color: $global-font-color-black;
-      border-bottom: 3px dashed $global-border-color-black;
-    }
-
     .featured-image-preview {
       width: 100%;
-      padding: 40% 0 0;
-      // padding: 30% 0 0;
+      padding: 30% 0 0;
       position: relative;
       margin: 0.6rem auto;
       @include transition(transform 0.4s ease);
@@ -109,8 +92,6 @@
         left: 0;
         top: 0;
         object-fit: cover;
-        margin: 0 auto;
-        display: block;
       }
 
       &:hover {
@@ -132,13 +113,6 @@
       text-overflow: ellipsis;
       @include overflow-wrap(break-word);
       color: $global-font-secondary-color;
-
-      [theme='dark'] & {
-        color: $global-font-secondary-color-dark;
-      }
-      [theme='black'] & {
-        color: $global-font-secondary-color-black;
-      }
 
       h2,
       h3,
@@ -165,13 +139,6 @@
       b,
       strong {
         color: $global-font-secondary-color;
-
-        [theme='dark'] & {
-          color: $global-font-secondary-color-dark;
-        }
-        [theme='black'] & {
-          color: $global-font-secondary-color-black;
-        }
       }
     }
 

@@ -2,17 +2,26 @@
   <div class="page home" posts>
     <h2>歌曲資訊</h2>
     <textarea rows="10" style="width: 100%; resize: vertical" v-model="songInfoRaw"></textarea>
-    <div v-for="(value, key) in songInfo">{{ key }}: {{ value }}</div>
+    <div v-for="(value, key) in songInfo" :key="key">{{ key }}: {{ value }}</div>
     <input v-model="youtubeId" />
     <button @click="uploadSong">Upload Song</button>
 
     <h2 for="">LRC or SRT</h2>
     <textarea rows="10" style="width: 100%; resize: vertical" v-model="lyrics"></textarea>
 
+    <h2 for="">去除時間</h2>
+    <textarea rows="10" style="width: 100%; resize: vertical" v-model="lyricsArray"></textarea>
+
     <h2 for="">翻譯</h2>
     <textarea rows="10" style="width: 100%; resize: vertical" v-model="otherLyrics"></textarea>
-    <div v-for="(line, index) in lyricsArray">
-      <span v-html="line"></span> <br />{{ otherLyricsArray[index] }}
+
+    <div class="line" v-for="(item, index) in startTimes" :key="index">
+      <div class="input-container">
+        <input :value="item" @input="updateItem(index, $event.target.value)" />
+      </div>
+      <div class="lyrics">
+        <span v-html="lyricsArray[index]"></span><br /><span>{{ otherLyricsArray[index] }}</span>
+      </div>
     </div>
 
     <button @click="uploadLyrics">Upload Lyrics</button>
@@ -24,7 +33,7 @@ import { createLyrics } from '@/services/firebase/lyricsService'
 import { createSong } from '@/services/firebase/songService'
 
 import { doc } from 'firebase/firestore'
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 
 const songInfoRaw = ref(`\
 [ti:グレースノート]
@@ -105,7 +114,6 @@ const lyricsArray = computed(() => {
   })
   // startTimes.pop();
   // endTimes.shift();
-  console.log(startTimes)
 
   return newLyricsArray
 })
@@ -161,9 +169,33 @@ const uploadLyrics = async () => {
   })
   console.log(lyrics_tw)
 }
+
+const updateItem = (index, value) => {
+  startTimes[index] = parseFloat(value)
+  console.log(startTimes)
+}
 </script>
 <style scoped>
-div {
+.line {
   border-bottom: 1px solid #ccc;
+  display: flex;
+  padding: 5px 0;
+}
+
+.line > div {
+  margin: 0 5px;
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.input-container input {
+  width: 100%;
+}
+
+.lyrics {
+  flex: 5;
 }
 </style>

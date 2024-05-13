@@ -23,12 +23,14 @@
             v-for="(time, index) in lyricsFinder.startTimes"
             @click="handleLyricSelection(time)"
             :data-time="time"
+            :key="index"
           >
             <div
               v-for="(language, langIndex) in lyricsFinder.supportedLangs"
               v-html="lyricsFinder.lyrics[langIndex][index]"
               :data-lang="language"
               :class="{ active: index === currentIndex }"
+              :key="langIndex"
             ></div>
           </div>
         </div>
@@ -111,7 +113,7 @@ onReady((event) => {
     }
     currentTime.value = instance?.value.getCurrentTime()
     currentIndex.value = lyricsFinder.value.getCurrIndex(currentTime.value)
-    console.log(currentIndex.value)
+
     if (isRepeat.value && currentIndex.value !== repeatIndex.value) {
       seekTo(lyricsFinder.value.getTimestamp(repeatIndex.value))
     }
@@ -190,14 +192,6 @@ const navigateLyrics = (direction) => {
         font-family: 'Noto Sans JP';
         font-size: 1.1em;
       }
-    }
-
-    [theme='dark'] & {
-      border-bottom: 3px dashed $global-border-color-dark;
-    }
-
-    [theme='black'] & {
-      border-bottom: 3px dashed $global-border-color-black;
     }
 
     .active {

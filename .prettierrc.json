@@ -8,5 +8,6 @@
 
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": ["^@/(.*)$", "^@(.*)$", "^(.*)", "^[./]"],
-  "importOrderSeparation": true
+  "importOrderSeparation": true,
+  "endOfLine": "auto"
 }

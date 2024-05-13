@@ -20,8 +20,8 @@ import { createManager } from '@vue-youtube/core'
 
 import App from './App.vue'
 import router from './router'
-// Normalize css
-import './styles/normalize.css'
+import './styles/main.css'
+import './styles/style.scss'
 import { createApp } from 'vue'
 
 library.add(

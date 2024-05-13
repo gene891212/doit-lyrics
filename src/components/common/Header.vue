@@ -4,7 +4,7 @@
   <header class="desktop" id="header-desktop">
     <div class="header-wrapper">
       <div class="header-title">
-        <router-link to="/">Desktop Title</router-link>
+        <router-link to="/">AimerVerse</router-link>
       </div>
       <div class="menu">
         <div class="menu-inner">
@@ -12,14 +12,13 @@
             {{ item }}
           </router-link>
           <span class="menu-item delimiter"></span>
-          <a
+          <button
             @click.prevent="themeManager.switchTheme"
-            href="javascript:void(0);"
-            class="menu-item theme-switch"
-            title="switchTheme"
+            class="menu-item theme-select"
+            aria-label="Switch Theme"
           >
-            <font-awesome-icon :icon="['fas', 'adjust']" transform="rotate-225" fixed-width />
-          </a>
+            <font-awesome-icon :icon="['fas', 'adjust']" fixed-width />
+          </button>
         </div>
       </div>
     </div>
@@ -40,7 +39,7 @@
     <div class="header-container">
       <div class="header-wrapper">
         <div class="header-title">
-          <router-link to="/"> Mobile Title </router-link>
+          <router-link to="/">AimerVerse</router-link>
         </div>
         <div
           class="menu-toggle"
@@ -57,11 +56,11 @@
         </router-link>
         <a
           href="javascript:void(0);"
-          class="menu-item theme-switch"
+          class="menu-item theme-select"
           title="Switch Theme"
           @click.prevent="themeManager.switchTheme"
         >
-          <font-awesome-icon :icon="['fas', 'adjust']" transform="rotate-225" fixed-width />
+          <font-awesome-icon :icon="['fas', 'adjust']" fixed-width />
         </a>
       </div>
     </div>

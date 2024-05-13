@@ -57,6 +57,3 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
-<style lang="scss">
-@import './styles/style.scss';
-</style>

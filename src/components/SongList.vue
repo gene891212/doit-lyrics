@@ -52,36 +52,15 @@
 </template>
 <script setup>
 import SongMeta from '@/components/SongMeta.vue'
-import db from '@/services/firebase/index'
 import { getAllSongs } from '@/services/firebase/songService'
 
-import { collection, getDocs, query, limit } from 'firebase/firestore'
 import { onMounted, reactive } from 'vue'
 
 const songs = reactive([])
-const songsPerPage = 10
-
-const fetchSongs = async () => {
-  const songsRef = collection(db, 'songs')
-  const songsQuery = query(songsRef, limit(songsPerPage))
-
-  try {
-    const snapshot = await getDocs(songsQuery)
-    snapshot.forEach((doc) => {
-      songs.push({
-        id: doc.id,
-        ...doc.data()
-      })
-    })
-  } catch (error) {
-    console.error('Error fetching songs:', error)
-  }
-}
 
 onMounted(async () => {
   // await fetchSongs();
   const allSongs = await getAllSongs()
   songs.push(...allSongs)
-  console.log(songs.value)
 })
 </script>

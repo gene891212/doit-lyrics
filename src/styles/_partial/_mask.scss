@@ -9,12 +9,7 @@
   z-index: -1;
   background-color: rgba(0, 0, 0, 0);
 
-  // .blur & {
-  //   z-index: 100;
-  //   background-color: rgba(0, 0, 0, 0.25);
-  // }
-
-  &.blur {
+  .blur & {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.25);
   }

@@ -2,3 +2,10 @@
 // Custom style
 // 自定义样式
 // ==============================
+.single {
+  .content {
+    ruby {
+      background: $global-background-color;
+    }
+  }
+}
