@@ -1,17 +1,28 @@
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
+  faAdjust,
+  faAngleRight,
   faArrowUp,
   faBackward,
-  faPlay,
+  faBug,
+  faCheckCircle,
+  faExclamationTriangle,
   faForward,
-  faUndoAlt,
-  faAdjust,
+  faInfoCircle,
+  faLightbulb,
+  faListOl,
+  faListUl,
   faMusic,
   faPause,
-  faInfoCircle,
-  faAngleRight,
-  faTags
+  faPencilAlt,
+  faPlay,
+  faQuestionCircle,
+  faQuoteRight,
+  faSkullCrossbones,
+  faTags,
+  faTimesCircle,
+  faUndoAlt
 } from '@fortawesome/free-solid-svg-icons'
 
 /* import font awesome icon component */
@@ -35,7 +46,18 @@ library.add(
   faPause,
   faInfoCircle,
   faAngleRight,
-  faTags
+  faTags,
+  faPencilAlt,
+  faListUl,
+  faLightbulb,
+  faCheckCircle,
+  faQuestionCircle,
+  faExclamationTriangle,
+  faTimesCircle,
+  faSkullCrossbones,
+  faBug,
+  faListOl,
+  faQuoteRight
 )
 
 const app = createApp(App)

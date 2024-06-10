@@ -4,17 +4,18 @@
       <h1 class="single-title animate__animated animate__flipInX">
         {{ songData.title }}
       </h1>
-      <h2 class="single-subtitle">Create SVG diagrams using GoAT or Mermaid in DoIt</h2>
+      <h2 class="single-subtitle">{{ songData?.translateTitle || '尚無歌名翻譯' }}</h2>
       <song-meta :song="songData"></song-meta>
     </template>
     <template v-else>
       <h1 class="single-title animate__animated animate__flipInX">Loading...</h1>
     </template>
-    <div class="content" id="content" lg-uid="lg0">
+    <div class="content" id="content">
       <!-- Player -->
       <div class="video-container">
         <div ref="playerRef"></div>
       </div>
+      <Admonition title="譯者的話">{{ songData?.translatorWords || '目前沒有東西' }}</Admonition>
       <template v-if="lyricsFinder">
         <!-- Lyrics -->
         <div id="lrc">
@@ -62,13 +63,14 @@
 </template>
 <script setup>
 import SongMeta from '@/components/SongMeta.vue'
+import Admonition from '@/components/common/Admonition.vue'
 import { getAllLyricsByYoutubeId } from '@/services/firebase/lyricsService'
 import { getSongByYoutubeId } from '@/services/firebase/songService'
 import { LyricsFinder } from '@/utils/lyrics'
 
-import { usePlayer, PlayerState } from '@vue-youtube/core'
+import { PlayerState, usePlayer } from '@vue-youtube/core'
 
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const props = defineProps({
   youtubeId: {
@@ -167,7 +169,7 @@ const navigateLyrics = (direction) => {
   height: 0;
   margin-top: 8px;
   margin-bottom: 16px;
-  
+
   iframe {
     position: absolute;
     top: 0;
@@ -209,7 +211,6 @@ const navigateLyrics = (direction) => {
   bottom: 1.5rem;
   left: 0;
   right: 0;
-  opacity: 0.85;
 
   display: flex;
   justify-content: center;
