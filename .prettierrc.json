@@ -5,9 +5,16 @@
   "singleQuote": true,
   "printWidth": 100,
   "trailingComma": "none",
-
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": ["^@/(.*)$", "^@(.*)$", "^(.*)", "^[./]"],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "importOrder": [
+    "^@/(.*)$",
+    "^@(.*)$",
+    "^(.*)",
+    "^[./]"
+  ],
   "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
   "endOfLine": "auto"
 }

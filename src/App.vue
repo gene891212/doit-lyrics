@@ -26,7 +26,7 @@
 import Footer from '@/components/common/Footer.vue'
 import Header from '@/components/common/Header.vue'
 
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { RouterView } from 'vue-router'
 
 const showHeader = ref(true)
